@@ -1,0 +1,1 @@
+# karma-rewire-istanbul-example
