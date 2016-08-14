@@ -40,6 +40,12 @@ module.exports = {
 	module: {
 		loaders
 	},
+  externals: {
+    'cheerio': 'window',
+    'react/addons': true,
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true
+  },
 	devServer: {
 		contentBase: "./public",
 		// do not print bundle build stats
