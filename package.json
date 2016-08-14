@@ -45,5 +45,11 @@
     "webpack": "1.13.1",
     "webpack-cleanup-plugin": "^0.2.0",
     "webpack-dev-server": "1.14.1"
+  },
+  "nyc": {
+    "exclude": [
+      "tests.bundle.js",
+      "**/tests/**/*Test.js"
+    ]
   }
 }
