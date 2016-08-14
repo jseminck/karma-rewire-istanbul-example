@@ -1,3 +1,5 @@
+const webpackConfig = require("./webpack.config.js");
+
 // Karma configuration
 // Generated on Sun Aug 14 2016 13:51:50 GMT+0300 (EEST)
 
@@ -15,20 +17,25 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'tests/*.js'
+      'tests/tests.bundle.js'
+      // ...
     ],
-
 
     // list of files to exclude
     exclude: [
     ],
 
-
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+     'tests/tests.bundle.js': ['webpack'],
     },
 
+    webpack: webpackConfig,
+
+    webpackMiddleware: {
+      noInfo: true
+    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
