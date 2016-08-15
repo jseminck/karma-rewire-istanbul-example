@@ -4,6 +4,10 @@
  */
 import "babel-polyfill";
 
-// require all "tests/specs/**/*Test.js"
+// require all "tests/*.js"
 const testsContext = require.context("./", true, /Test\.js$/);
 testsContext.keys().forEach(testsContext);
+
+// require all "../src/**/*.js"
+const sourcesContext = require.context("./../src/", true, /\.js$/);
+sourcesContext.keys().forEach(sourcesContext);
