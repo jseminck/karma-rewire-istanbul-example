@@ -2,7 +2,7 @@
   "presets": ["es2015", "react"],
   "env": {
     "test": {
-      "plugins": ["rewire", "istanbul"]
+      "plugins": ["istanbul", "rewire"]
     }
   }
 }
